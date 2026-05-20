@@ -1,0 +1,34 @@
+# --- FRONTEND (React/Vite) ---
+node_modules/
+dist/
+dist-ssr/
+*.local
+
+# Ignorar específicamente archivos de variables de entorno
+.env
+.env.*
+!.env.example
+
+# --- BACKEND (.NET) ---
+bin/
+obj/
+publish/
+.vs/
+# Ignorar configuraciones con contraseñas locales
+appsettings.Development.json
+
+# --- LOGS & DEBUG ---
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+pnpm-debug.log*
+
+# --- EDITORS & SYSTEM ---
+.vscode/*
+!.vscode/extensions.json
+.idea
+.DS_Store
+*.suo
+*.sln
+*.sw?
