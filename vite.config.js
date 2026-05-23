@@ -7,7 +7,7 @@ export default defineConfig({
   server: {
     port: 5173,
     watch: {
-      usePolling: true, // Útil si trabajas en Windows con carpetas compartidas o Docker
+      usePolling: true,
     },
   },
 })
