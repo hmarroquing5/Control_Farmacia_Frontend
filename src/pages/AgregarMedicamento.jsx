@@ -6,7 +6,7 @@ import { medicamentoService } from '../services/medicamentoService';
 const AgregarMedicamento = ({ onLogout }) => {
   const navigate = useNavigate();
 
-  // Estado para las categorías (ahora inicia vacío)
+  // Estado para las categorías
   const [categorias, setCategorias] = useState([]);
   const [loading, setLoading] = useState(true);
   
@@ -15,7 +15,7 @@ const AgregarMedicamento = ({ onLogout }) => {
     nombreProducto: '', 
     codigoBarras: 'CODBAR-', // Prefijo inicial
     precioCosto: '', 
-    codigoLote: 'LOTE-', 
+    codigoLote: 'LOTE-', // Prefijo inicial
     cantidadActual: 1, 
     fechaVencimiento: '' 
   });
@@ -124,7 +124,6 @@ useEffect(() => {
         {loading ? "Cargando categorías..." : "Seleccione una categoría..."}
       </option>
       {categorias.map(cat => (
-        // Usar minúsculas si así vienen de tu API (ej: cat.categoriaID, cat.nombre)
         <option key={cat.categoriaID} value={cat.categoriaID}>
           {cat.nombre}
         </option>

@@ -14,7 +14,6 @@ function App() {
   const handleLogout = () => setIsAuthenticated(false);
 
   return (
-    // ELIMINAMOS <BrowserRouter> DE AQUÍ PORQUE YA ESTÁ EN MAIN.JSX
     <Routes>
       <Route path="/" element={<LoginPage onLogin={handleLogin} />} />
       
