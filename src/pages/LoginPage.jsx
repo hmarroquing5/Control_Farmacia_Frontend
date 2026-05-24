@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { loginUsuario } from '../services/authService';
 
@@ -23,8 +23,7 @@ const LoginPage = ({ onLogin }) => {
       
       onLogin(true); // Cambia el estado en App.jsx
       navigate('/menu');
-    } catch (err) {
-      // Si el backend no devuelve JSON, capturamos el error aquí
+    } catch {
       setError('Usuario o contraseña inválidos');
     }
   };

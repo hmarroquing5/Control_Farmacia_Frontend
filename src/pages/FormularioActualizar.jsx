@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import Navbar from '../components/Navbar';
 import { medicamentoService } from '../services/medicamentoService'; // 1. IMPORTANTE: Importar el servicio
@@ -25,7 +25,7 @@ const FormularioActualizar = ({ onLogout }) => {
         cantidad: data.cantidadActual, 
         vencimiento: data.vence 
       });
-    } catch (error) {
+    } catch {
       alert("Lote no encontrado en la base de datos.");
       setLoteEncontrado(null);
     } finally {
@@ -42,7 +42,7 @@ const FormularioActualizar = ({ onLogout }) => {
             alert(`Lote ${loteEncontrado.lote} actualizado con éxito.`);
             navigate('/menu');
         }
-    } catch (error) {
+    } catch {
         alert("Error al actualizar el lote.");
     }
   };

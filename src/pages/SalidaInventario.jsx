@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import  { useState, useEffect } from 'react';
 import Navbar from '../components/Navbar';
 import { medicamentoService } from '../services/medicamentoService';
 
@@ -8,8 +8,7 @@ const SalidaInventario = ({ onLogout }) => {
   const [productos, setProductos] = useState([]);
   const [loteSugerido, setLoteSugerido] = useState([]);
   const [carrito, setCarrito] = useState([]);
-  const [loading, setLoading] = useState(false);
-  const [errorVencido, setErrorVencido] = useState(false);
+  const [setErrorVencido] = useState(false);
 
   const cancelarOperacion = () => {
     setLoteSugerido([]);
