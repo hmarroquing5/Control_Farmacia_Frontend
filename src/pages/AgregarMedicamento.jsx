@@ -162,6 +162,7 @@ useEffect(() => {
                   <label className="block text-sm font-bold text-slate-700 mb-2">Precio Costo (Q)</label>
                   <input 
                     type="number" 
+                    min = "0.01"
                     step="0.01" 
                     required 
                     onKeyDown={blockSpecialChars}
