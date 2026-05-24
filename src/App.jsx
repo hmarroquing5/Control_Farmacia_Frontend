@@ -1,4 +1,3 @@
-import React, { useState } from 'react';
 import { Routes, Route, Navigate } from 'react-router-dom';
 import LoginPage from './pages/LoginPage';
 import MenuPrincipal from './pages/MenuPrincipal';
