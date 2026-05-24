@@ -8,13 +8,11 @@ const SalidaInventario = ({ onLogout }) => {
   const [productos, setProductos] = useState([]);
   const [loteSugerido, setLoteSugerido] = useState([]);
   const [carrito, setCarrito] = useState([]);
-  const [setErrorVencido] = useState(false);
 
   const cancelarOperacion = () => {
     setLoteSugerido([]);
     setProductos([]);
     setCarrito([]);
-    setErrorVencido(false);
 const selectCat = document.getElementById('select-categoria');
     if (selectCat) {
         selectCat.value = ''; 
