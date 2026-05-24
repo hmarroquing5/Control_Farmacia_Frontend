@@ -118,8 +118,11 @@ finalizarVenta: async (datos) => {
         throw new Error("El detalle de la venta no está definido");
     }
 
+    const usuarioValido = datos.usuarioID || datos.usuario;
+
     const payload = {
-        UsuarioID: datos.usuarioID,
+        usuarioID: usuarioValido,
+        UsuarioID: usuarioValido,
         JsonDetalles: JSON.stringify(datos.detalles)
     };
 
